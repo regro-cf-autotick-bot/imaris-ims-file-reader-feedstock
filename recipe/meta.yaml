@@ -1,5 +1,5 @@
 {% set name = "imaris-ims-file-reader" %}
-{% set version = "0.1.6" %}
+{% set version = "0.1.7" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/imaris_ims_file_reader-{{ version }}.tar.gz
-  sha256: ae057e49bee6b76cd973bb5dd6882b4dc2ad4d603cf0602acad6c507c23d16ef
+  sha256: 85c4296c5a48ed94f4af42e03f05c0be00bb4be8830ef4722b4e94db2a3aa9d4
 
 build:
   noarch: python
