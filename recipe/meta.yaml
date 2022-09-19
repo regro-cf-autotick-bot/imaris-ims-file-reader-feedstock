@@ -21,9 +21,11 @@ requirements:
     - setuptools-scm
   run:
     - h5py >=3.5.0
+    - numcodecs
     - numpy
     - python >=3.7
     - scikit-image
+    - zarr
 
 test:
   imports:
