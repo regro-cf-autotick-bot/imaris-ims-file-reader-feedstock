@@ -6,24 +6,24 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/imaris_ims_file_reader-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/imaris_ims_file_reader-{{ version }}.tar.gz
   sha256: 357e48262236ac534a9c8e0cedffb983a66cdaa32d097ed5b47dd85ca62672d6
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  number: 1
 
 requirements:
   host:
     - pip
-    - python >=3.7
+    - python {{ python_min }}
     - setuptools-scm
   run:
     - h5py >=3.5.0
     - numcodecs
     - numpy
-    - python >=3.7
+    - python >={{ python_min }}
     - scikit-image
     - zarr
 
@@ -34,6 +34,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/CBI-PITT/imaris_ims_file_reader
